@@ -18,7 +18,7 @@ cd cmsdas2020_ml
 ./docker/run.sh
 ```
 
-The script will run start the container with your local repostiroy mounted into it so that changes you make to the notebook are safely stored.
+The script will start the container with your local repostiroy mounted into it so that changes you make to the notebook persist when the container stops.
 
 Make sure **not** to execute any command with `sudo` as a port will be opened on your machine to run and host the notebook server.
 Otherwise, you potentially allow people within your local network to access your system with root permissions!
