@@ -3,7 +3,9 @@
 # Script that sets up the environment for the CMS DAS 2020 ML exercise
 # and installs software when the SWAN environment is detected.
 # Arguments:
-# 1. Reinstall flag (default "0"). When "1", the software is removed if existing before installing.
+# 1. Install mode (default "default"). When "fresh", the software is removed if existing before
+#    installing. When "force", the install instructions are executed on top of potentially existing
+#    software.
 
 action() {
     # check where we are
