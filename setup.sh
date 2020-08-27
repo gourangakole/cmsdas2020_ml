@@ -55,6 +55,9 @@ action() {
             echo "for a fresh reinstallation, pass 'fresh' as the first argument to this script"
             echo "to force the installation on top of the existing one, pass 'force'"
         fi
+
+        # in any case, fix the google namespace package in case it was corrupted
+        touch "$DASML_SOFTWARE/lib/python${pyv}/site-packages/google/__init__.py"
     fi
 
     echo "environment successfully set up"
