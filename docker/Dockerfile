@@ -1,8 +1,5 @@
 FROM tensorflow/tensorflow:2.3.0
 
-# copy the adjusted system bashrc
-COPY bashrc /etc/bash.bashrc
-
 # environment variables
 ENV DASML_BASE /exercise
 ENV DASML_DATA /data
@@ -46,5 +43,8 @@ RUN mkdir -p $DASML_DATA
 # update permissions
 RUN chmod a+rwX $DASML_BASE $DASML_DATA
 
-# default command (run_exercise is defined in bashrc)
+# copy the adjusted system bashrc to be used in login shells
+COPY bashrc /etc/bash.bashrc
+
+# default command, run_exercise is defined in bashrc
 CMD bash -i -l -c run_exercise
