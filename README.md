@@ -25,8 +25,13 @@ Otherwise, you potentially allow people within your local network to access your
 
 Then, open a web browser at the displayed location and click on `exercise.ipynb` to access the notebook.
 
-**Note on docker**:
+**Note on docker on Linux**:
 If you installed docker for the first time to run this exercise, and you appear to miss the permission to execute docker with your user account, add yourself to the "docker" group (e.g. via `sudo usermod -a -G docker $(whoami)`).
+
+**Note on docker on Mac**:
+By default, docker for Mac limits the memory available to running containers to 2 GB.
+Depending on how much input data you use in the exercise (this can be configured in the notebook), you might want to increase this number to about 6 to 8 GB, depending on your system.
+Instructions to change this setting can be found [here](https://docs.docker.com/docker-for-mac/#resources).
 
 
 #### 2. Standalone docker image from the docker hub
